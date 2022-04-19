@@ -63,7 +63,7 @@
             <div class="sidebar" data-color="orange">
                 <div class="sidebar-wrapper">
                     <div class="logo">
-                        <a href="" class="simple-text logo-mini"><img src="{{ asset('assets/img/bus-logo.jpg') }}" class="avatar"></a>
+                        <a href="{{ route('admin.ds_xe') }}" class="simple-text logo-mini"><img src="{{ asset('assets/img/bus-logo.jpg') }}" class="avatar"></a>
                         <a href="" class="simple-text logo-normal">{{ _('Quản lý bán vé xe') }}</a>
                     </div>
                     <ul class="nav">

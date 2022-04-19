@@ -6,7 +6,7 @@
 @section('content')
 <div class="row">
     @foreach ($arr_ad as $each)
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h5 class="title">{{ __('Đổi mật khẩu') }}</h5>
@@ -45,7 +45,7 @@
             </form>
         </div>
     </div>
-    <div class="col-md-4">
+    {{-- <div class="col-md-4">
         <div class="card card-user">
             <div class="card-body">
                 <p class="card-text">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     @endforeach
 </div>
 @endsection

@@ -57,11 +57,11 @@ class xe_khach_model extends Model
             $this->ma_xe
         ]);
     }
-    public function update_anh()
+    public function update_anh($ma_xe)
     {
-        DB::update("update xe_khach set anh = ? where ma_xe= ?", [
+        $update = DB::update("update xe_khach set anh = ? where ma_xe= ?", [
             $this->anh,
-            $this->ma_xe,
+            $ma_xe,
         ]);
     }
     static function kiem_tra_ten_xe($ten_xe)

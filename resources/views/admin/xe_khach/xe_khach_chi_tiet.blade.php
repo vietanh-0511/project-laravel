@@ -14,7 +14,9 @@
             @foreach ($arr_xe as $each)
             <div class="card-body">
                 <div class="col-md-4" style="float: left;">
-                    <form action="{{ route('admin.update_anh') }}" enctype="multipart/form-data" method="POST">
+                    <form action="{{ route('admin.update_anh', [$each->ma_xe]) }}" enctype="multipart/form-data" method="POST">
+                        {{ csrf_field() }}
+                        <input type="hidden" name="ma_xe" value="{{$each->ma_xe}}" readonly>
                         <img src="{{ asset('assets/img') }}/{{$each->anh}}" class="img-responsive" alt="Image">
                         <input type="file" class="file-input" name="anh" id="anh" accept="image/*">
                         <button class="btn btn-fill btn-primary">
@@ -27,7 +29,6 @@
                     <table class="table tablesorter " id="">
                         <form method="POST" action="{{route('admin.chi_tiet_xe_xl')}}" autocomplete="off">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
 
                             <tr>
                                 <td style="font-weight:550;">

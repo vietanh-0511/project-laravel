@@ -29,7 +29,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin_mid
     Route::post('search', 'admin_controller@search')->name('search');
     Route::get('thong_ke', 'thong_ke_controller@thong_ke')->name('thong_ke');
 
-
     Route::get('ds_hang_xe', 'hang_xe_controller@ds_hang_xe')->name('ds_hang_xe');
     Route::get('them_hang_xe', 'hang_xe_controller@them_hang_xe')->name('them_hang_xe');
     Route::post('them_hang_xe_xl', 'hang_xe_controller@them_hang_xe_xl')->name('them_hang_xe_xl');
@@ -68,7 +67,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['admin_mid
     Route::get('ds_xe', 'xe_khach_controller@ds_xe')->name('ds_xe');
     Route::get('chi_tiet_xe/{ma_xe}', 'xe_khach_controller@chi_tiet_xe')->name('chi_tiet_xe');
     Route::post('chi_tiet_xe', 'xe_khach_controller@chi_tiet_xe_xl')->name('chi_tiet_xe_xl');
-    Route::post('update_anh', 'xe_khach_controller@update_anh')->name('update_anh');
+    Route::post('update_anh/{ma_xe}', 'xe_khach_controller@update_anh')->name('update_anh');
     Route::get('them_xe', 'xe_khach_controller@them_xe')->name('them_xe');
     Route::post('them_xe_xl', 'xe_khach_controller@them_xe_xl')->name('them_xe_xl');
     Route::get('xoa_xe/{ma_xe}', 'xe_khach_controller@xoa_xe')->name('xoa_xe');

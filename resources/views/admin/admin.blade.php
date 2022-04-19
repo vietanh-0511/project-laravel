@@ -6,7 +6,7 @@
 @section('content')
 <div class="row">
     @foreach ($arr_ad as $each)
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h5 class="title">{{ __('Thông Tin Admin') }}</h5>
@@ -19,7 +19,7 @@
 
                     <div class="form-group{{ $errors->has('user') ? ' has-danger' : '' }}">
                         <label>{{ __('Tên Đăng Nhập') }}</label>
-                        <input type="text" name="user" class="form-control{{ $errors->has('user') ? ' is-invalid' : '' }}" placeholder="{{ __('tên đăng nhập') }}" value="{{$each->ten_dang_nhap}}">
+                        <input readonly type="text" name="user" class="form-control{{ $errors->has('user') ? ' is-invalid' : '' }}" placeholder="{{ __('tên đăng nhập') }}" value="{{$each->ten_dang_nhap}}">
                         @include('admin/alerts.feedback',['field' => 'user'])
                     </div>
 
@@ -36,7 +36,7 @@
             </form>
         </div>
     </div>
-    <div class="col-md-4">
+    {{-- <div class="col-md-4">
         <div class="card card-user">
             <div class="card-body">
                 <p class="card-text">
@@ -72,7 +72,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     @endforeach
 </div>
 @endsection

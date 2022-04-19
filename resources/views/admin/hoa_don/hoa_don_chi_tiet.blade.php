@@ -64,7 +64,6 @@
                                                 @if($each_hdct->tinh_trang == 4)
                                                 {{ __('Đã hủy vé') }}
                                                 @endif</option>
-                                            <option value="1">Chờ phê duyệt</option>
                                             <option value="2">Đặt vé thành công</option>
                                             <option value="4">Hủy đặt vé</option>
                                         </select>

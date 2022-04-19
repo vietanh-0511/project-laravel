@@ -31,7 +31,7 @@
                         <div>
                             <img src="{{ asset('assets/img/now_logo.png') }}" alt="">
                         </div>
-                        <h1 class="card-title">{{ __('Log in') }}</h1>
+                        <h1 class="card-title">{{ __('Login') }}</h1>
                     </div>
                     <div class="card-body">
 
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Get Started') }}</button>
+                        <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Login') }}</button>
                         <div class="pull-left">
                             <h6>
                                 <a href="#" class="link footer-link">{{ __('Create Account') }}</a>

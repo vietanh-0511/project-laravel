@@ -38,23 +38,24 @@ class xe_khach_controller extends Controller
         $xe_khach->gia_ve  = $request->gia_ve;
         $xe_khach->bien_so  = $request->bien_so;
         $xe_khach->chi_tiet_xe_xl();
-        return redirect()->route('admin.ds_xe');
+        return redirect()->route('admin.chi_tiet_xe', [$xe_khach->ma_xe]);
     }
 
-    public function update_anh(Request $request)
+    public function update_anh(Request $request, $ma_xe)
     {
         $xe_khach = new xe_khach_model();
-        $xe_khach->ma_xe = $request->ma_xe;
+        //$xe_khach->ma_xe = $request->ma_xe;
         if ($request->hasFile('anh')) {
             $file = $request->file('anh');
             $filename = $file->getClientOriginalName('anh');
             $file->move('assets/img', $filename);
             $xe_khach->anh = $filename;
             // dd($filename);
+            
         }
-        $xe_khach->update_anh();
-        // 
-        return redirect()->route('admin.ds_xe');
+        $xe_khach->update_anh($ma_xe);
+        //dd($request->ma_xe);
+        return redirect()->route('admin.chi_tiet_xe', [$ma_xe]);
     }
 
     public function them_xe()

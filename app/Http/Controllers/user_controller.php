@@ -145,11 +145,11 @@ class user_controller extends Controller
         echo ($string_option);
     }
 
-    public function lay_ma_ghe()
-    {
-        $string = $_GET["id"];
-        echo ($string);
-    }
+    // public function lay_ma_ghe()
+    // {
+    //     $string = $_GET["id"];
+    //     echo ($string);
+    // }
 
     public function xu_ly_dat_ve(Request $rq)
     {
